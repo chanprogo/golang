@@ -6,16 +6,15 @@
 以下内容摘抄自 https://github.com/mitchellh/gox
 
 ## Installation
-To install Gox, please use `go get`. We tag versions so feel free to checkout that tag and compile.
-```
-$ go get github.com/mitchellh/gox
-...
-```
+
+To install Gox, please use `go get`. 
+We tag versions so feel free to checkout that tag and compile.  
+`go get github.com/mitchellh/gox`   
+
 Run `gox -h` for help and additional information.
-```
-$ gox -h
-...
-```
+
+
+
 
 ## Usage
 If you know how to use `go build`, then you know how to use Gox. For example, to build the current package, specify no parameters and just call `gox`. Gox will parallelize based on the number of CPUs you have by default and build for every platform by default:
@@ -55,23 +54,17 @@ $ gox github.com/mitchellh/gox github.com/hashicorp/serf
 
 Or if you want to just build for linux:
 
-```
-$ gox -os="linux"
-...
-```
+`gox -os="linux"`  
 
 Or maybe you just want to build for 64-bit linux:
 
-```
-$ gox -osarch="linux/amd64"
-...
-```
+`gox -osarch="linux/amd64"`  
 
 
 
 
----
-分别放在不同的文件夹:
+
+分别 放在 不同的 文件夹:  
 ```
 $ gox -output "{{.Dir}}_{{.OS}}_{{.Arch}}/swbatch"
 ```
