@@ -21,6 +21,12 @@
 2. `goimports`    Formatter    `go get -v golang.org/x/tools/cmd/goimports`   
 
 
+* gofmt：大部分的格式问题可以通过 gofmt 解决，gofmt 自动化格式代码，保证所有的 go 代码与官方推荐的格式保持一致，于是所有格式有关问题，都以 gofmt 的结果为准。
+* goimports：此工具在 gofmt 的基础上增加了自动删除和引入包。
+* go vet： vet 工具可以帮我们 静态分析 源码存在的各种问题，例如多余的代码，提前 return 的逻辑，struct 的 tag 是否符合标准等。编译前 先执行代码静态分析。
+* golint：类似于 javascript 中的 jslint 的工具，主要功能就是检测代码中不规范的地方。
+
+
 
 # Auto-completion
 
