@@ -15,7 +15,7 @@ export GOROOT=/usr/local/$MYTEMP
 export GOPATH=${HOME}/${MYTEMP}-path
 export GO111MODULE=off
 export GOPROXY=https://goproxy.io,direct
-export GOPRIVATE=gitlab.com,gitee.com,gitea.com,gl.zego.im
+export GOPRIVATE=gitlab.com,gitee.com,gitea.com
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
