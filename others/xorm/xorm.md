@@ -2,7 +2,7 @@
 
 
 
-`go get github.com/go-xorm/cmd/xorm`  
+`go get -u github.com/go-xorm/cmd/xorm`  
 
 
 
