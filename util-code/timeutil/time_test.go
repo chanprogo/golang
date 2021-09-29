@@ -15,5 +15,5 @@ func TestCalculateTimeDelay(t *testing.T) {
 
 func TestGetMonthStartAndEnd(t *testing.T) {
 	result := GetMonthStartAndEnd("2020", "6")
-	fmt.Print(result)
+	t.Log(result)
 }

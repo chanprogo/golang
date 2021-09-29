@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// CalculateTimeDelay delay = two - one 单位是s
+// CalculateTimeDelay delay = two - one 单位是 s
 func CalculateTimeDelay(one string, two string) (int64, error) {
 
 	loc, ok := time.LoadLocation("Local")
@@ -13,15 +13,13 @@ func CalculateTimeDelay(one string, two string) (int64, error) {
 		return 0, ok
 	}
 
-	timeLayout := "2006-01-02 15:04:05"
-
-	oneTime, ok1 := time.ParseInLocation(timeLayout, one, loc)
+	oneTime, ok1 := time.ParseInLocation(DATE_TIME, one, loc)
 	if ok1 != nil {
 		return 0, ok1
 	}
-	one1 := oneTime.Unix() //转化为时间戳 类型是int64
+	one1 := oneTime.Unix()
 
-	twoTime, ok2 := time.ParseInLocation(timeLayout, two, loc)
+	twoTime, ok2 := time.ParseInLocation(DATE_TIME, two, loc)
 	if ok2 != nil {
 		return 0, ok2
 	}
@@ -30,7 +28,7 @@ func CalculateTimeDelay(one string, two string) (int64, error) {
 	return two1 - one1, nil
 }
 
-// CalculateTimeDelayDay delay = two - one 单位是day
+// CalculateTimeDelayDay delay = two - one 单位是 day
 func CalculateTimeDelayDay(one1 string, two1 string) (int64, error) {
 
 	loc, ok := time.LoadLocation("Local")
@@ -41,17 +39,14 @@ func CalculateTimeDelayDay(one1 string, two1 string) (int64, error) {
 	if len(one1) != 19 || len(two1) != 19 {
 		return -1, errors.New("inputs error")
 	}
-
 	one := one1[:11] + "00:00:00"
 	two := two1[:11] + "00:00:00"
 
-	timeLayout := "2006-01-02 15:04:05"
-
-	oneTime, ok1 := time.ParseInLocation(timeLayout, one, loc)
+	oneTime, ok1 := time.ParseInLocation(DATE_TIME, one, loc)
 	if ok1 != nil {
 		return 0, ok1
 	}
-	twoTime, ok2 := time.ParseInLocation(timeLayout, two, loc)
+	twoTime, ok2 := time.ParseInLocation(DATE_TIME, two, loc)
 	if ok2 != nil {
 		return 0, ok2
 	}
@@ -64,13 +59,11 @@ func CalculateTimeDelayDay(one1 string, two1 string) (int64, error) {
 }
 
 func timeSubDays(t1, t2 time.Time) int {
-
 	if t1.Location().String() != t2.Location().String() {
 		return -1
 	}
 
 	hours := t1.Sub(t2).Hours()
-
 	if hours <= 0 {
 		return -1
 	}
@@ -90,5 +83,4 @@ func timeSubDays(t1, t2 time.Time) int {
 	}
 
 	return int(hours/24) + 1
-
 }
