@@ -7,9 +7,9 @@ import (
 
 	"example/app"
 	"example/conf"
-	"example/internal/protodatasvr"
-	"example/internal/rpcclient"
-	"example/internal/rpcserver"
+	"example/protodatasvr"
+	"example/rpcclient"
+	"example/rpcserver"
 )
 
 func main() {

@@ -13,13 +13,12 @@ var RPCAddr string
 func NewRPCSvr(rpcport string) {
 
 	RPCAddr = ":" + rpcport
-	RPCSvr = grpc.NewServer()
-
 	listen, err := net.Listen("tcp", RPCAddr)
 	if err != nil {
 		panic("监听 rpc 端口失败，err: " + err.Error())
 	}
 
+	RPCSvr = grpc.NewServer()
 	go func() {
 		err := RPCSvr.Serve(listen)
 		if err != nil {

@@ -5,8 +5,8 @@ import (
 
 	"example/app"
 	"example/conf"
-	"example/internal/protodatasvr"
-	"example/internal/rpcserver"
+	"example/protodatasvr"
+	"example/rpcserver"
 )
 
 func init() {

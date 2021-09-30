@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"example/internal/protodatasvr"
+	"example/protodatasvr"
 )
 
 func TestSendEmailServer_SendSms(t *testing.T) {

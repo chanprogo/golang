@@ -1,8 +1,8 @@
 package rpcserver
 
 import (
-	"example/internal/protodatasvr"
 	"example/mailservice"
+	"example/protodatasvr"
 
 	"golang.org/x/net/context"
 )

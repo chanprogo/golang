@@ -8,9 +8,8 @@ var Configer *config
 
 type config struct {
 	BeeConfiger beeConfig.Configer
-
-	RpcConf   RpcConfig
-	RedisConf RedisConfig
+	RpcConf     RpcConfig
+	RedisConf   RedisConfig
 }
 
 func NewConfiger(filename string) {
