@@ -6,19 +6,17 @@ option go_package = "internal/smsrpcsvrpkg/protodatasvr";
 
 // 发送邮件请求
 message SendEmailRequest {
-    repeated string address = 1;
-    string subject = 2;
-    string body = 3;
+  repeated string address = 1;
+  string subject = 2;
+  string body = 3;
 }
 // 响应
 message SendEmailResponse {
-    int32 code = 1;
-    string msg = 2;
+  int32 code = 1;
+  string msg = 2;
 }
 
 service EmailService {
-        // 发送邮件
-        rpc SendEmail (SendEmailRequest) returns (SendEmailResponse) {
-        };
-
+  // 发送邮件
+  rpc SendEmail(SendEmailRequest) returns (SendEmailResponse) {};
 }
