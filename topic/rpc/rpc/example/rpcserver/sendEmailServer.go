@@ -8,10 +8,11 @@ import (
 )
 
 type SendEmailServer struct {
+	protodatasvr.UnimplementedEmailServiceServer
 }
 
 // 发送邮件通知
-func (t *SendEmailServer) SendEmail(ctx context.Context, req *protodatasvr.SendEmailRequest) (*protodatasvr.SendEmailResponse, error) {
+func (t SendEmailServer) SendEmail(ctx context.Context, req *protodatasvr.SendEmailRequest) (*protodatasvr.SendEmailResponse, error) {
 	sendEmail := &mailservice.SendEmail{}
 	code, err := sendEmail.SendEmail(req.Address, req.Subject, req.Body)
 

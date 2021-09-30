@@ -17,7 +17,7 @@ func main() {
 	conf.NewConfiger("./app.conf")
 
 	app.NewRPCSvr(conf.Configer.RpcConf.RpcPort)
-	protodatasvr.RegisterEmailServiceServer(app.RPCSvr, &rpcserver.SendEmailServer{})
+	protodatasvr.RegisterEmailServiceServer(app.RPCSvr, rpcserver.SendEmailServer{})
 
 	rpcclient.RpcClient()
 

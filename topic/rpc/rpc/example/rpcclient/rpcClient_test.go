@@ -10,10 +10,10 @@ import (
 )
 
 func init() {
-	conf.NewConfiger("../../../cmd/smsrpcsvr/app.conf")
+	conf.NewConfiger("../app.conf")
 
 	app.NewRPCSvr(conf.Configer.RpcConf.RpcPort)
-	protodatasvr.RegisterEmailServiceServer(app.RPCSvr, &rpcserver.SendEmailServer{})
+	protodatasvr.RegisterEmailServiceServer(app.RPCSvr, rpcserver.SendEmailServer{})
 }
 
 func TestRpcClient(t *testing.T) {
