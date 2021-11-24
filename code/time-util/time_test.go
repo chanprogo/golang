@@ -17,3 +17,9 @@ func TestGetMonthStartAndEnd(t *testing.T) {
 	result := GetMonthStartAndEnd("2020", "6")
 	t.Log(result)
 }
+
+// go test -v -run="TestGetTimeFormat"
+func TestGetTimeFormat(t *testing.T) {
+	timeStr := "2021-06-10T02:12:00.580Z"
+	t.Log(GetTimeFormat(timeStr))
+}

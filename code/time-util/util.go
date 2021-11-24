@@ -1,6 +1,8 @@
 package timeutil
 
-import "time"
+import (
+	"time"
+)
 
 func MustParseDuration(s string) time.Duration {
 	value, err := time.ParseDuration(s)
@@ -16,4 +18,23 @@ func ParseInLocal(layout, value string) (time.Time, error) {
 		return time.Time{}, err
 	}
 	return time.ParseInLocation(layout, value, loc)
+}
+
+func GetTimestamp(change string) int64 {
+	ti, _ := time.Parse(time.RFC3339, change)
+	timeUint := ti.In(time.Local).Unix()
+	return timeUint
+}
+
+func GetTimeFormat(str string) string {
+	// ti, _ := time.Parse(time.RFC3339, str)
+
+	ti, err := time.ParseInLocation("2006-01-02T15:04:05.000Z", str, time.Local)
+	if err != nil {
+		return ""
+	}
+
+	re := ti.Format("2006-01-02 15:04:05")
+
+	return re
 }
