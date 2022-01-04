@@ -13,3 +13,11 @@
 `sudo ldconfig` # refresh shared library cache.  
 
 `protoc --version`  
+
+
+
+
+或者在下载页直接下载：  
+https://github.com/protocolbuffers/protobuf/releases
+
+
