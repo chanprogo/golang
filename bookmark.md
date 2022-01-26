@@ -1,3 +1,3 @@
 
-1. <https://go.dev/>  ( or <https://golang.google.cn/>)
-2. [Go语言中文网 - Golang中文社区](https://studygolang.com/)
+1. [Go语言中文网 - Golang中文社区](https://studygolang.com/)
+2. [Golang 中国](https://www.golangtc.com/)
