@@ -6,12 +6,5 @@
 
 
 
-
-+`go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc`    
-
-
-
-
-
-gogoprotobuf is a fork of {https://github.com/golang/protobuf}  
-https://github.com/gogo/protobuf   
+<https://github.com/gogo/protobuf>   
+gogoprotobuf is a fork of {<https://github.com/golang/protobuf>}  
